@@ -122,5 +122,20 @@ def updateImage():
                 print('|   |   |   |   |')
                 print('|   |   |   |   |')
                 print('|___|___|___|___|')
+        elif x == 3:
+            if y == 1:
+                print(' ___ ___ ___ ___')
+                print('|   |   |   |   |')
+                print('|   |   |   |   |')
+                print('|___|___|___|___|')
+                print('|   |   |   |   |')
+                print('|   |   |   |   |')
+                print('|___|___|___|___|')
+                print('|   |   |   |   |')
+                print('| * |   |   |   |')
+                print('|___|___|___|___|')
+                print('|   |   |   |   |')
+                print('|   |   |   |   |')
+                print('|___|___|___|___|')
 
 updateImage()
