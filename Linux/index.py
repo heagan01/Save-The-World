@@ -280,5 +280,12 @@ def updateImage():
                 print('|   |   |   |   |')
                 print('|   |   |   |   |')
                 print('|___|___|___|___|')
+        elif x == 2:
+            if y == 1:
+                print(' ___ ___ ___ ___')
+                print('|   |   |   |   |')
+                print('|   |   |   | * |')
+                print('|___|___|___|___|')
+                print('')
 
 updateImage()
