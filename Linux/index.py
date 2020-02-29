@@ -296,6 +296,7 @@ def updateImage():
                 print('|   |   |   |   |')
                 print('|___|___|___|___|')
             elif y == 2:
+<<<<<<< HEAD
                 print(' ___ ___ ___ ___')
                 print('|   |   |   |   |')
                 print('|   |   |   | * |')
@@ -474,5 +475,17 @@ def playerMovement():
         x += 1
     elif movement == 'd':
         y += 1
+=======
+              print(' ___ ___ ___ ___')
+              print('|   |   |   |   |')
+              print('|   |   |   | * |')
+              print('|___|___|___|___|')
+              print('|   |   |   |   |')
+              print('|   |   |   |   |')
+              print('|___|___|___|___|')
+              print('|   |   |   |   |')
+              print('|   |   |   |   |')
+              print('|___|___|___|___|')
+>>>>>>> 0d4cc4a050f0414c7d565e99bbf584c59f98c6c4
 
 updateImage()
