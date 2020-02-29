@@ -1,3 +1,5 @@
+import os
+
 x = 1
 y = 1
 completed = 0
@@ -6,6 +8,8 @@ def updateImage():
     global x
     global y
     global completed
+
+    os.system('clear')
 
     if completed == 1:
         if x == 1:
@@ -296,7 +300,6 @@ def updateImage():
                 print('|   |   |   |   |')
                 print('|___|___|___|___|')
             elif y == 2:
-<<<<<<< HEAD
                 print(' ___ ___ ___ ___')
                 print('|   |   |   |   |')
                 print('|   |   |   | * |')
@@ -453,7 +456,6 @@ def updateImage():
                 print('|   |   |   | * |')
                 print('|___|___|___|___|')
 
-
 def playerMovement():
     global x
     global y
@@ -475,17 +477,37 @@ def playerMovement():
         x += 1
     elif movement == 'd':
         y += 1
-=======
-              print(' ___ ___ ___ ___')
-              print('|   |   |   |   |')
-              print('|   |   |   | * |')
-              print('|___|___|___|___|')
-              print('|   |   |   |   |')
-              print('|   |   |   |   |')
-              print('|___|___|___|___|')
-              print('|   |   |   |   |')
-              print('|   |   |   |   |')
-              print('|___|___|___|___|')
->>>>>>> 0d4cc4a050f0414c7d565e99bbf584c59f98c6c4
+    elif movement == 'e':
+        action()
+    elif movement == '1':
+        x -= 1
+    elif movement == '2':
+        y -= 1
+    elif movement == '3':
+        x += 1
+    elif movement == '4':
+        y += 1
+    elif movement == '5':
+        action()
 
-updateImage()
+    updateImage()
+    playerMovement()
+
+def menu():
+    os.system('clear')
+    print('Save The World')
+    print('\n')
+    print('1) Start The Game')
+
+    input = raw_input('Please insert your command: ')
+
+    if input == 'start':
+        updateImage()
+        playerMovement()
+    elif input == '1':
+        updateImage()
+        playerMovement()
+    else:
+        menu()
+
+menu()
