@@ -20,3 +20,8 @@ $ cd Linux
 $ python index.py
 
 ```
+## Windows
+
+1. Open the required software folder
+
+2. Launch python
