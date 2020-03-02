@@ -312,11 +312,19 @@ def getPlayerMovement():
     global x
     global y
 
-    print('1) Up')
-    print('2) Left')
-    print('3) Down')
-    print('4) Right')
-    print('5) Action') 
+    if completed == 1:
+        print('1) Up')
+        print('2) Left')
+        print('3) Down')
+        print('4) Right')
+        print('5) Action')
+        print('6) Complete the tutorial')
+    else:
+        print('1) Up')
+        print('2) Left')
+        print('3) Down')
+        print('4) Right')
+        print('5) Action') 
 
     movement = raw_input('Please enter in your movement: ')
 
@@ -340,6 +348,9 @@ def getPlayerMovement():
         y += 1
     elif movement == '5':
         action()
+    elif movement == '6':
+        if completed == 1:
+            completeTutorial()
 
     updateImage()
     getPlayerMovement()
@@ -352,7 +363,7 @@ def menu():
     print('\n')
     print('1) Start The Game')
 
-    command = raw_input('Please enter in your input')
+    command = raw_input('Please enter in your input: ')
 
     if command == '1':
         updateImage()
