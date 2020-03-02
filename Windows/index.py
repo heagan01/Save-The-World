@@ -30,7 +30,7 @@ def updateImage():
     global y
     global completed
 
-    os.system('clear')
+    os.system('cls')
 
     if completed == 1:
         if x == 1:
@@ -346,7 +346,7 @@ def getPlayerMovement():
     pass
 
 def menu():
-    os.system('clear')
+    os.system('cls')
 
     print('Save The World')
     print('\n')
