@@ -1,8 +1,26 @@
 import os
+import json
 
-x = 3
-y = 1
-completed = 0
+f = open('data.json', 'r')
+
+print(f.read())
+
+x = input('Please enter in the x value: ')
+y = input('Please enter in the y value: ')
+completed = input('Please enter the completed value: ')
+
+data = {
+    'x': x,
+    'y': y,
+    'completed': completed
+}
+
+test = json.dumps(data)
+
+def save():
+    with open('data.json', 'w') as json_file:
+        json_file.write(test)
+    pass
 
 def drawBoxes():
     print('|   |   |   |   |')
@@ -30,7 +48,7 @@ def updateImage():
     global y
     global completed
 
-    os.system('cls')
+    os.sytem('cls')
 
     if completed == 1:
         if x == 1:
@@ -290,6 +308,7 @@ def updateImage():
                 drawBoxTop()
                 print('|   |   |   | * |')
                 drawBoxBottom()
+    print('x = ', x, 'y = ', y, 'completed = ', completed)
     pass
 
 def action():
@@ -324,7 +343,7 @@ def getPlayerMovement():
         print('2) Left')
         print('3) Down')
         print('4) Right')
-        print('5) Action') 
+        print('5) Action')
 
     movement = raw_input('Please enter in your movement: ')
 
@@ -354,14 +373,18 @@ def getPlayerMovement():
 
     updateImage()
     getPlayerMovement()
+    save()
     pass
 
 def menu():
-    os.system('cls')
+    os.sytem('cls')
 
     print('Save The World')
     print('\n')
     print('1) Start The Game')
+    print('\n')
+    print('Note: Please save your player info on a text file, or else you could lose your player info, write it like "x = 1, y = 1, completed = 1", you can see this information at the bottom of the image.')
+    print('\n')
 
     command = raw_input('Please enter in your input: ')
 
@@ -370,4 +393,5 @@ def menu():
         getPlayerMovement()
     pass
 
+save()
 menu()
