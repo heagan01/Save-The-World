@@ -48,7 +48,7 @@ def updateImage():
     global y
     global completed
 
-    os.sytem('cls')
+    os.system('cls')
 
     if completed == 1:
         if x == 1:
@@ -376,12 +376,54 @@ def getPlayerMovement():
     save()
     pass
 
+def tutorial1():
+    os.system('cls')
+
+    print('Now, break the tree using the action button!')
+    asdf = raw_input('Do you understand? [y/n]: ')
+
+    if asdf == 'y':
+        updateImage()
+        getPlayerMovement()
+    elif asdf == 'n':
+        tutorial1()
+
+    pass
+
+def tutorial():
+    os.system('cls')
+
+    print('----- Player Movement -----')
+    print('\n')
+    print('To move your player forward: 1 / w')
+    print('\n')
+    print('To move your player to the left: 2 / a')
+    print('\n')
+    print('To move your player backwards: 3 / s')
+    print('\n')
+    print('To move your player right: 4 / d')
+    print('\n')
+    print('To perform actions: 5 / q')
+    print('\n')
+    print('Hint: you can look the numbers for your player movement in the game.')
+    print('\n' + '\n')
+
+    asdf = raw_input('Do you understand? [y/n]: ')
+
+    if asdf == 'y':
+        tutorial1()
+    elif asdf == 'n':
+        tutorial()
+    pass
+
 def menu():
-    os.sytem('cls')
+    os.system('cls')
 
     print('Save The World')
     print('\n')
     print('1) Start The Game')
+    print('\n')
+    print('2) Start the tutorial')
     print('\n')
     print('Note: Please save your player info on a text file, or else you could lose your player info, write it like "x = 1, y = 1, completed = 1", you can see this information at the bottom of the image.')
     print('\n')
@@ -391,6 +433,8 @@ def menu():
     if command == '1':
         updateImage()
         getPlayerMovement()
+    elif command == '2':
+        tutorial()
     pass
 
 save()
