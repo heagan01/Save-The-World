@@ -3,6 +3,7 @@ if (localStorage.getItem('completed') == null) {
 	localStorage.setItem('y2', 1);
 	localStorage.setItem('completed', 0);
 	localStorage.setItem('tree', 1);
+	localStorage.setItem('dialog0', 0);
 	localStorage.setItem('x', 0);
 	localStorage.setItem('y', 0);
 }
@@ -13,6 +14,7 @@ x2 = localStorage.getItem('x2');
 y2 = localStorage.getItem('y2');
 completed = localStorage.getItem('completed');
 tree = localStorage.getItem('tree');
+dialog0 = localStorage.getItem('dialog0');
 page = 0
 checkPos();
 
@@ -21,8 +23,21 @@ function setup() {
 }
 
 function draw() {
-	// document.getElementById(1).classList.add('stone');
-	// document.getElementById(1).classList.remove('grass');
+	document.getElementById('player').style.marginLeft = x;
+	document.getElementById('player').style.marginTop = y;
+
+	if (dialog0 == 0) {
+		document.getElementById('dialog0').style.display = 'block';
+	}
+
+	if (completed != 0) {
+		document.getElementById('leaf1').style.display = 'none';
+		document.getElementById('leaf2').style.display = 'none';
+		document.getElementById('leaf3').style.display = 'none';
+		document.getElementById('leaf4').style.display = 'none';
+		document.getElementById('wood1').style.display = 'none';
+		document.getElementById('wood2').style.display = 'none';
+	}
 }
 
 function checkPos() {
@@ -97,10 +112,12 @@ document.addEventListener("keypress", function onEvent(event) {
     	if (y2 == 1) {
     		if (x2 == 3) {
     			tree = 0;
+    			completed = 1;
     		}
     	} else if (y2 == 2) {
     		if (x2 == 4) {
     			tree = 0;
+    			completed = 1;
     		}
     	} 
     }
@@ -108,5 +125,6 @@ document.addEventListener("keypress", function onEvent(event) {
     localStorage.setItem('x2', x2);
     localStorage.setItem('y2', y2);
     localStorage.setItem('tree', tree);
+    localStorage.setItem('completed', completed);
     checkPos();
 });

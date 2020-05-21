@@ -32,3 +32,113 @@ img {
 	margin-top: 0;
 	margin-left: 192px;
 }
+
+#four {
+	margin-top: 64px;
+	margin-left: 0px;
+}
+
+#five {
+	margin-top: 64px;
+	margin-left: 64px;
+}
+
+#six {
+	margin-top: 64px;
+	margin-left: 128px;
+}
+
+#seven {
+	margin-top: 64px;
+	margin-left: 192px;
+}
+
+#eight {
+	margin-top: 128px;
+	margin-left: 0px;
+}
+
+#nine {
+	margin-top: 128px;
+	margin-left: 64px;
+}
+
+#ten {
+	margin-top: 128px;
+	margin-left: 128px;
+}
+
+#eleven {
+	margin-top: 128px;
+	margin-left: 192px;
+}
+
+#twelve {
+	margin-top: 192px;
+	margin-left: 0;
+}
+
+#thirteen {
+	margin-top: 192px;
+	margin-left: 64px;
+}
+
+#fourteen {
+	margin-top: 192px;
+	margin-left: 128px;
+}
+
+#fifteen {
+	margin-top: 192px;
+	margin-left: 192px;
+}
+
+#player {
+	height: 32px;
+	width: 32px;
+	margin-left: 17px;
+	margin-top: 17px;
+	background-color: #000;
+}
+
+#wood1 {
+	margin-top: 48px;
+	margin-left: 215px;
+	height: 16px;
+	width: 16px;
+}
+
+#wood2 {
+	margin-top: 32px;
+	margin-left: 215px;
+	height: 16px;
+	width: 16px;
+}
+
+#leaf1 {
+	margin-top: 16px;
+	margin-left: 215px;
+	height: 16px;
+	width: 16px;
+}
+
+#leaf2 {
+	margin-top: 0px;
+	margin-left: 215px;
+	height: 16px;
+	width: 16px;
+}
+
+#leaf3 {
+	margin-top: 16px;
+	margin-left: 199px;
+	height: 16px;
+	width: 16px;
+}
+
+#leaf4 {
+	margin-top: 16px;
+	margin-left: 231px;
+	height: 16px;
+	width: 16px;
+}
